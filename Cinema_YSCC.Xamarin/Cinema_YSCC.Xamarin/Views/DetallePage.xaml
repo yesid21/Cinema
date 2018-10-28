@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cinema_YSCC.Xamarin.Views.DetallePage"
+             Title="Resumen De Compra">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout x:Name="carteleral" Margin="20">
+                <Image Source="{Binding Imagen}" HeightRequest="70"/>
+                <Label Text="Pelicula" FontAttributes="Bold"/>
+                <Label Text="{Binding Nombre, StringFormat='Titulo: {0:F0}'}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Estreno: "/>
+                    <Label Text="{Binding FechaEstreno}"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout x:Name="stackLayout" >
+                <StackLayout Margin="20">
+                <Label Text="Funcion" FontAttributes="Bold"/>
+                <Label Text="{Binding Cinema, StringFormat='Cinema: {0:F0}'}"/>
+                <Label Text="{Binding Sala, StringFormat='Sala: {0:F0}'}"/>
+                <Label Text="{Binding Ciudad, StringFormat='Ciudad: {0:F0}'}"/>
+                </StackLayout>
+                <StackLayout  Margin="20">
+                <Label Text="Tiquetes" FontAttributes="Bold"/>
+                <Label Text="{Binding Precio, StringFormat='Precio: {0:F0}'}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Cantidad: "/>
+                    <Label x:Name="Label21" Text=""/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                        <Label Text="Total: "/>
+                        <Label x:Name="lbltotal"  Text=""/>
+                    </StackLayout>
+                </StackLayout>
+                <Button Clicked="Confirmar" Text="Confirmar Compra"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

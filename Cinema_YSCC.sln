@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema_YSCC.Xamarin.Android
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema_YSCC.Xamarin", "Cinema_YSCC.Xamarin\Cinema_YSCC.Xamarin\Cinema_YSCC.Xamarin.csproj", "{F5AD43BF-1EAA-463C-A858-7BE1929F67B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema_YSCC.Dominio", "Cinema_YSCC.Dominio\Cinema_YSCC.Dominio.csproj", "{CCA0BB97-2AC4-4CD5-ACBF-45FBCBEED010}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{F5AD43BF-1EAA-463C-A858-7BE1929F67B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5AD43BF-1EAA-463C-A858-7BE1929F67B5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F5AD43BF-1EAA-463C-A858-7BE1929F67B5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CCA0BB97-2AC4-4CD5-ACBF-45FBCBEED010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA0BB97-2AC4-4CD5-ACBF-45FBCBEED010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA0BB97-2AC4-4CD5-ACBF-45FBCBEED010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA0BB97-2AC4-4CD5-ACBF-45FBCBEED010}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

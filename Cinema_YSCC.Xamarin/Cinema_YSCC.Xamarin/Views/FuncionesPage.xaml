@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cinema_YSCC.Xamarin.Views.FuncionesPage"
+             Title="Funciones">
+    <Grid Margin="20" FlowDirection="LeftToRight">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Column="0" Grid.Row="0">
+            <Label Text="Titulo: " />
+            <Label Text="Fecha Estreno: " />
+            <Label Text="Cantidad De Boletas: " />
+        </StackLayout>
+        <StackLayout Grid.Column="1" Grid.Row="0">
+            <Label Text="{Binding Nombre}" />
+            <Label Text="{Binding FechaEstreno}" />
+            <Entry x:Name="MiEntry" />
+        </StackLayout>
+
+        <ListView x:Name="listFuncion"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" ItemSelected="Funcion_Select">
+            <ListView.ItemTemplate  >
+                <DataTemplate >
+                    <ViewCell  >
+                        <StackLayout Orientation="Horizontal" >
+                            <StackLayout Orientation="Vertical" >
+                                <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Cinema}"/>
+                                        <Label Text="{Binding Sala}"/>
+                                        <Label Text="{Binding Ciudad}"/>
+                                    </StackLayout>
+                                    <Label Text="{Binding Precio}"/>
+                                </StackLayout>
+                            </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </Grid>
+
+</ContentPage>

@@ -1,3 +1,4 @@
+using Cinema_YSCC.Xamarin.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -7,14 +8,21 @@ namespace Cinema_YSCC.Xamarin
 {
 	public partial class App : Application
 	{
-		public App ()
-		{
-			InitializeComponent();
+        public static bool IsUserLoggedIn { get; set; }
 
-			MainPage = new MainPage();
-		}
+        public App()
+        {
+            if (!IsUserLoggedIn)
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new CarteleraPage());
+            }
+        }
 
-		protected override void OnStart ()
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}
